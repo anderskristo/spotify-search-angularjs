@@ -1,0 +1,20 @@
+		<form id="searchForm" ng-submit="">
+			<div class="form-group">
+				<div class="row">
+					<div class="col-xs-12 col-sm-2">
+						<select ng-model="searchCtrl.search.type" name="type" class="form-control">
+							<option value="artist">Artist</option>
+							<option value="track">Track</option>
+							<option value="album">Album</option>
+						</select>
+					</div>
+					<div class="col-xs-12 col-sm-9">
+						<input ng-model="searchCtrl.search.term" name="text" type="text" class="form-control" />
+					</div>
+					<div class="col-xs-12 col-sm-1" ng-show="searchForm ">
+						<input type="submit" class="form-control btn btn-primary" />
+					</div>
+					{{searchCtrl.search.term}}
+				</div>
+			</div>
+		</form>
